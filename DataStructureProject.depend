@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1610221606 source:d:\datastructures-and-algorithmes\dsproject\main.cpp
+	<iostream>
+	"client.h"
+	"LinkedList.h"
+	"casher.h"
+
+1610221095 d:\datastructures-and-algorithmes\dsproject\include\client.h
+	"LinkedList.h"
+
+1610221296 d:\datastructures-and-algorithmes\dsproject\include\linkedlist.h
+	"Node.h"
+	<iostream>
+
+1610221268 d:\datastructures-and-algorithmes\dsproject\include\node.h
+
+1610220305 d:\datastructures-and-algorithmes\dsproject\include\casher.h
+
