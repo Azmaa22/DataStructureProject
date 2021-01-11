@@ -18,7 +18,7 @@ public:
 
 //    void Add(Node *newNode);
 
-    void Add(T *data)
+    void Add(T data)
     {
         Node<T> *newNode = new Node<T>(data);
 
@@ -40,7 +40,7 @@ public:
 
         while(current != NULL)
         {
-            cout << *(current->Data) << endl;
+            cout << (current->Data) << endl;
             current = current->Next;
         }
     }

@@ -5,10 +5,10 @@ template<class T>
 class Node
 {
     public:
-        T *Data;
+        T Data;
         Node *Next, *Prev;
 
-        Node(T *data)
+        Node(T data)
         {
             Data = data;
             Next = Prev = 0;

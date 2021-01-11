@@ -16,3 +16,25 @@
 
 1610220305 d:\datastructures-and-algorithmes\dsproject\include\casher.h
 
+1610388149 source:d:\datastructures-and-algorithmes\datastructureproject\main.cpp
+	<iostream>
+	"client.h"
+	"LinkedList.h"
+	"casher.h"
+	"Queue.h"
+
+1610386791 d:\datastructures-and-algorithmes\datastructureproject\include\client.h
+	"LinkedList.h"
+	"casher.h"
+
+1610384249 d:\datastructures-and-algorithmes\datastructureproject\include\linkedlist.h
+	"Node.h"
+	<iostream>
+
+1610384227 d:\datastructures-and-algorithmes\datastructureproject\include\node.h
+
+1610220305 d:\datastructures-and-algorithmes\datastructureproject\include\casher.h
+
+1610387899 d:\datastructures-and-algorithmes\datastructureproject\include\queue.h
+	"Node.h"
+

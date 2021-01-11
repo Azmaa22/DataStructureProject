@@ -2,12 +2,14 @@
 #define CLIENT_H
 
 #include "LinkedList.h"
+#include"casher.h"
 class client
 {
     public:
 
         void setArrival(int t){arrival_time=t;}
         void setService(int t){service_time=t;}
+        void setNumberOfCasher(int num){numberOfCasher=num;}
         void setInteruption(LinkedList<int> L){
              interuption_time=L;
 
@@ -20,6 +22,7 @@ class client
           final_time=0;
           waitting_time=0;
           finishing=false;
+          numberOfCasher=-1;
         }
         client(){
          arrival_time=0;
@@ -27,12 +30,13 @@ class client
          finishing =false; ///client not finish him task
          waitting_time=0;
          final_time=0;
+         numberOfCasher=-1;
         }
         int getArrival(){return arrival_time;}
         int getService(){return service_time;}
         int getFinalTime(){return final_time;}
         int getWaittingTime(){return waitting_time;}
-        //void getInterruption(){interuption_time.Display();}
+        int getNumberOFCasher(){return numberOfCasher;}
         LinkedList<int> getInterruption(){return interuption_time;}
         bool getFlag(){return finishing;}
     protected:
@@ -42,6 +46,7 @@ class client
         int arrival_time,service_time,waitting_time,final_time;
         LinkedList<int> interuption_time;
         bool finishing;
+        int numberOfCasher;
 };
 
 #endif // CLIENT_H
