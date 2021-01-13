@@ -66,7 +66,7 @@ class Queue
 
 
         }
-
+       int getLength(){return length;}
 
     private:
 };

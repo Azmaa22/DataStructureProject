@@ -13,7 +13,7 @@ using namespace std;
 int main()
 {
     ///inpust
-    int client_number,casher_number,i=0,
+    int client_number,casher_number,current_client_number=0,
     arrival,service,chooseAnotherClient=1,
     chooseAnyInteruption, numClient,interruption_time,chooseInteruption=1;
     LinkedList <int>interruption_time_list;
@@ -28,16 +28,16 @@ int main()
 	casher casherArr[casher_number];
 
 	while(chooseAnotherClient==1){ ///if you want to enter another client press 1 otherwise press 0
-        if(i<client_number)
+        if(current_client_number<client_number)
             {
-            cout<<"Please Enter info  of Client["<<i+1<<"]"<<endl;
+            cout<<"Please Enter info  of Client["<<current_client_number+1<<"]"<<endl;
             cout<<"Enter Arrival Time"<<endl;
             cin>>arrival;
             cout<<"Enter Service Time"<<endl;
             cin>>service;
 
-            clientArr[i].setArrival(arrival);
-            clientArr[i].setService(service);
+            clientArr[current_client_number].setArrival(arrival);
+            clientArr[current_client_number].setService(service);
 
             cout<<"Do you have any interruption for this client enter 1 or not 0"<<endl;
             cin>>chooseAnyInteruption;
@@ -50,10 +50,10 @@ int main()
                 cout<<"If you enter another interruption for this client please enter 1 not 0"<<endl;
                 cin>>chooseInteruption;
             }
-            clientArr[i].setInteruption(interruption_time_list);  ///assign list of interruption to client
+            clientArr[current_client_number].setInteruption(interruption_time_list);  ///assign list of interruption to client
         }
 
-                i++;
+                current_client_number++;
             cout<<"Do you want Enter client again 1 or not enter 0"<<endl;
             cin>>chooseAnotherClient;
 
@@ -76,7 +76,7 @@ int main()
 
 
        cout<<"QQQQQQQQQQQQQQQQQ"<<endl;
-       Queue<client> q =  assignCasherToClient(clientArr,casherArr,i,casher_number);
+       Queue<client> q =  assignCasherToClient(clientArr,casherArr,current_client_number,casher_number);
         while(q.IsEmpty()){
             cout<<q.FrontValue().getNumberOFCasher()<<" : "<<q.FrontValue().getArrival()<<endl;
             q.Dequeue();

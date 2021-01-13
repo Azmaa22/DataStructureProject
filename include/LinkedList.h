@@ -8,7 +8,7 @@ using namespace std;
 template<class T>
 class LinkedList
 {
-    Node<T> *head, *tail;
+    public: Node<T> *head, *tail;
 
 public:
     LinkedList()

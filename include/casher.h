@@ -6,22 +6,22 @@ class casher
 {
     public:
         casher() {
-           openning_time=0;
+           serving_time=0;
            serving_flag=false; ///not work
         }
         casher(int t,bool f){
-         openning_time=t;
+         serving_time=t;
          serving_flag=f;
         }
-        void setOpenningTime(int time){openning_time=time;}
+        void setserving_time(int time){openning_time=time;}
         void setServingFlag(bool flag){serving_flag=flag;}
-        int getOpenningTime(){return openning_time;}
+        int getserving_time(){return openning_time;}
         bool getSrvingFlag(){return serving_flag;}
 
     protected:
 
     private:
-        int openning_time;
+        int serving_time;
         bool serving_flag;
 };
 
