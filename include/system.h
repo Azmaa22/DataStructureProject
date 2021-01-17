@@ -28,7 +28,7 @@ return Q;
 }
 ///------------------------------------------------------------
 
-void calcWaittingTime(clientArr,casherArr,current_client_number,casher_number){
+/*void calcWaittingTime(clientArr,casherArr,current_client_number,casher_number){
 Queue <client> Q;
 Queue <client> QClone;
 Queue <client> QC;
@@ -88,5 +88,5 @@ int newServingTime;
 
 }
 
-
+*/
 

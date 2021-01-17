@@ -16,7 +16,6 @@ public:
         head = tail = NULL;
     }
 
-//    void Add(Node *newNode);
 
     void Add(T data)
     {
@@ -34,6 +33,20 @@ public:
         }
     }
 
+    void deleteFirst(){
+
+     Node<T> *current ;
+         current=head;
+        if(current->Next!=NULL)
+        {
+            head=current->Next;
+        }
+        else{
+            head=NULL;
+        }
+
+    }
+
     void Display()
     {
         Node<T> *current = head;
@@ -45,53 +58,11 @@ public:
         }
     }
 
-    void Delete(T *data)
-    {
-        Node<T> *pDelete = Search(data);
 
-        if(pDelete == NULL)
-            return;
 
-        if(pDelete == head)
-        {
-            if(pDelete == tail) // if(head->Next == NULL)
-            {
-                head = tail = NULL;
-            }
-            else
-            {
-                head = head->Next;
-                head->Prev = NULL;
-            }
-        }
-        else if(pDelete == tail)
-        {
-            tail = tail->Prev;
-            tail->Next = NULL;
-        }
-        else
-        {
-            pDelete->Prev->Next = pDelete->Next; // A->Next = B
-            pDelete->Next->Prev = pDelete->Prev; // B->Prev = A
-        }
 
-        delete pDelete;
-    }
 
-    void InsertAfter(T *afterData, T *newData)
-    {
 
-    }
-
-    void DeleteByIndex(int index)
-    {
-
-    }
-
-    void Reverse()
-    {
-
-    }
 
 private:
     Node<T>* Search(T *data)
@@ -108,6 +79,8 @@ private:
 
         return NULL;
     }
+
+
 };
 
 #endif // LINKEDLIST_H

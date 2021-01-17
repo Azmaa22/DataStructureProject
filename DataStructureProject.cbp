@@ -34,12 +34,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Bank.h" />
 		<Unit filename="include/LinkedList.h" />
 		<Unit filename="include/Node.h" />
 		<Unit filename="include/Queue.h" />
 		<Unit filename="include/casher.h" />
 		<Unit filename="include/client.h" />
-		<Unit filename="include/system.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

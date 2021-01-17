@@ -1,6 +1,6 @@
 #ifndef QUEUELIST_H
 #define QUEUELIST_H
-
+#include"LinkedList.h"
 #include "Node.h"
 using namespace std;
 template <class T>
@@ -14,6 +14,10 @@ class Queue
         head=tail=NULL;
         length=0;
         }
+       /** Queue(const Queue &oldQ){
+            head=tail=NULL;
+            length=oldQ.length;
+        }*/
         void Enqueu(T data){
             Node<T> *newNode=new Node<T>(data);
 
@@ -38,7 +42,57 @@ class Queue
            }
 
        ////////////
+void DeleteByIndex(int index)
+    {
+       Node<T> *pDelete = Searchindex(index);
 
+        if(pDelete == NULL)
+            return;
+
+        if(pDelete == head)
+        {
+            if(pDelete == tail) // if(head->Next == NULL)
+            {
+                head = tail = NULL;
+            }
+            else
+            {
+                head = head->Next;
+                head->Prev = NULL;
+            }
+        }
+        else if(pDelete == tail)
+        {
+
+            tail = tail->Prev;
+            tail->Next = NULL;
+        }
+        else
+        {
+            pDelete->Prev->Next = pDelete->Next; // A->Next = B
+            pDelete->Next->Prev = pDelete->Prev; // B->Prev = A
+        }
+
+        delete pDelete;
+
+    }
+
+/**void addInLast(T data){
+     Node<T> *newNode=new Node<T>(data);
+     Node <T> * current=head->Next;
+          if(head==NULL){
+            head=tail=newNode;
+            }
+            else{
+
+                 if(current==NULL){
+                    current=newNode;
+                  }
+            }
+            current=current->Next;
+
+            length++;
+}*/
 
         int IsEmpty(){
           if(length){
@@ -69,6 +123,22 @@ class Queue
        int getLength(){return length;}
 
     private:
+        int index;
+         Node<T>* Searchindex(int x)
+         {
+              Node<T> *current = head;
+              index=0;
+             while(current != NULL)
+            {
+                  if(index == x)
+                      return current;
+
+                 current = current->Next;
+                   index++;
+            }
+
+            return NULL;
+         }
 };
 
 #endif // QUEUELIST_H
