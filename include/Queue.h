@@ -14,10 +14,7 @@ class Queue
         head=tail=NULL;
         length=0;
         }
-       /** Queue(const Queue &oldQ){
-            head=tail=NULL;
-            length=oldQ.length;
-        }*/
+
         void Enqueu(T data){
             Node<T> *newNode=new Node<T>(data);
 
@@ -77,22 +74,6 @@ void DeleteByIndex(int index)
 
     }
 
-/**void addInLast(T data){
-     Node<T> *newNode=new Node<T>(data);
-     Node <T> * current=head->Next;
-          if(head==NULL){
-            head=tail=newNode;
-            }
-            else{
-
-                 if(current==NULL){
-                    current=newNode;
-                  }
-            }
-            current=current->Next;
-
-            length++;
-}*/
 
         int IsEmpty(){
           if(length){
